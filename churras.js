@@ -627,5 +627,5 @@ var priceTotal = (valorBeef + valorPork + valorChicken + valorChickenH + valorSa
 
 });
 
-console.log("Testando Commits");
+console.log("Mensagem por Stanley Sathler");
 
