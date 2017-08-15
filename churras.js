@@ -85,141 +85,141 @@ var comprar = 0;
 $("#button-cal3").click(function(){
 //*Calculos
 
-	var qtyMale = parseInt($('#input-male').val(), 10);
-	var qtyFemale = parseInt($('#input-female').val(), 10);
-	var qtyChildren = parseInt($('#input-children').val(), 10);
+var qtyMale = parseInt($('#input-male').val(), 10);
+var qtyFemale = parseInt($('#input-female').val(), 10);
+var qtyChildren = parseInt($('#input-children').val(), 10);
 
 
-	var qtyTotal =([qtyMale * 350 + qtyFemale * 250 + qtyChildren * 100]/1000) 
+var qtyTotal =([qtyMale * 350 + qtyFemale * 250 + qtyChildren * 100]/1000) 
 
-	comprar = (qtyTotal / checkMeat)*1000;
+comprar = (qtyTotal / checkMeat)*1000;
 
-	qtyTotalP = qtyFemale + qtyMale + qtyChildren;
+qtyTotalP = qtyFemale + qtyMale + qtyChildren;
 
-	qtySoda = parseInt($('#input-children').val(), 10)
+qtySoda = parseInt($('#input-children').val(), 10)
 
-	qtyBeer = qtyMale * 5 + qtyFemale * 3;
+qtyBeer = qtyMale * 5 + qtyFemale * 3;
 	qtyCups = (qtyTotalP * 0.05).toFixed(); // 1 pacote de 100 copos para 20 pessoas.
-		if (qtyCups < 1) {
-			qtyCups = 1
-			}
+	if (qtyCups < 1) {
+		qtyCups = 1
+	}
 
 	qtyNapkin = (qtyTotalP * 0.1).toFixed(); // 1 pacote de 50 guardanapos para 10 pessoas
-		if (qtyNapkin < 1) {
-			qtyNapkin = 1
-			}
+	if (qtyNapkin < 1) {
+		qtyNapkin = 1
+	}
 
 	qtyCharcoal = (qtyTotalP * 0.1).toFixed(); // 1 pacote de 3kg de carvão para 10 pessoas
-		if (qtyCharcoal < 1) {
-			qtyCharcoal = 1
-			}
+	if (qtyCharcoal < 1) {
+		qtyCharcoal = 1
+	}
 
 // *Calculos
 
-	var visivel  = $('#step-2').is(':visible');
-	if (visivel) {
-		$("#step-2").hide();
-		$("#step-2").hide();
-		$("#step-2.1").show();
-	}
+var visivel  = $('#step-2').is(':visible');
+if (visivel) {
+	$("#step-2").hide();
+	$("#step-2").hide();
+	$("#step-2.1").show();
+}
 
-	$("#qty-carne").text("Quantidade de carne: " + qtyTotal +"kg");
+$("#qty-carne").text("Quantidade de carne: " + qtyTotal +"kg");
 
-	function calculo() {
+function calculo() {
 
 
-		if ($('#check1').is(':checked')) {
+	if ($('#check1').is(':checked')) {
 
-			$('.check1-step3').prop('checked', true);
+		$('.check1-step3').prop('checked', true);
 
-			if (comprar < 1000) {
-				$("#mostrar-carnes1").text("Carne Bovina: " + comprar.toFixed(0) + " gramas");
-			} else {
-				$("#mostrar-carnes1").text("Carne Bovina: " + (comprar.toFixed(0)/1000) + " kg");
-			}
-		}
-
-		if ($('#check2').is(':checked')) {
-
-			if (comprar < 1000) {
-				$("#mostrar-carnes2").text("Carne Suína: " + comprar.toFixed(0) + " gramas");
-			} else {
-				$("#mostrar-carnes2").text("Carne Suína: " + (comprar.toFixed(0)/1000) + " kg");
-			}
-		}
-
-		if ($('#check3').is(':checked')) {
-
-			if (comprar < 1000) {
-				$("#mostrar-carnes3").text("Asa e Coxa de Frango: " + comprar.toFixed(0) + " gramas");
-			} else {
-				$("#mostrar-carnes3").text("Asa e Coxa de Frango: " + (comprar.toFixed(0)/1000) + " kg");
-			}
-		}	
-
-		if ($('#check4').is(':checked')) {
-
-			if (comprar < 1000) {
-				$("#mostrar-carnes4").text("Coração: " + comprar.toFixed(0) + " gramas");
-			} else {
-				$("#mostrar-carnes4").text("Coração: " + (comprar.toFixed(0)/1000) + " kg");
-			}
-		}	
-
-		if ($('#check5').is(':checked')) {
-
-			if (comprar < 1000) {
-				$("#mostrar-carnes5").text("Linguiça: " + comprar.toFixed(0) + " gramas");
-			} else {
-				$("#mostrar-carnes5").text("Linguiça: " + (comprar.toFixed(0)/1000) + " kg");
-			}
-		}
-
-		if ($('#check6').is(':checked')) {
-
-			if (comprar < 1000) {
-				$("#mostrar-carnes6").text("Pão de Alho: " + comprar.toFixed(0) + " gramas");
-			} else {
-				$("#mostrar-carnes6").text("Pão de Alho: " + (comprar.toFixed(0)/1000) + " kg");
-			}
+		if (comprar < 1000) {
+			$("#mostrar-carnes1").text("Carne Bovina: " + comprar.toFixed(0) + " gramas");
+		} else {
+			$("#mostrar-carnes1").text("Carne Bovina: " + (comprar.toFixed(0)/1000) + " kg");
 		}
 	}
 
-	if (qtyMale < 2 && qtyFemale < 2 && qtyChildren < 2 ) {
+	if ($('#check2').is(':checked')) {
+
+		if (comprar < 1000) {
+			$("#mostrar-carnes2").text("Carne Suína: " + comprar.toFixed(0) + " gramas");
+		} else {
+			$("#mostrar-carnes2").text("Carne Suína: " + (comprar.toFixed(0)/1000) + " kg");
+		}
+	}
+
+	if ($('#check3').is(':checked')) {
+
+		if (comprar < 1000) {
+			$("#mostrar-carnes3").text("Asa e Coxa de Frango: " + comprar.toFixed(0) + " gramas");
+		} else {
+			$("#mostrar-carnes3").text("Asa e Coxa de Frango: " + (comprar.toFixed(0)/1000) + " kg");
+		}
+	}	
+
+	if ($('#check4').is(':checked')) {
+
+		if (comprar < 1000) {
+			$("#mostrar-carnes4").text("Coração: " + comprar.toFixed(0) + " gramas");
+		} else {
+			$("#mostrar-carnes4").text("Coração: " + (comprar.toFixed(0)/1000) + " kg");
+		}
+	}	
+
+	if ($('#check5').is(':checked')) {
+
+		if (comprar < 1000) {
+			$("#mostrar-carnes5").text("Linguiça: " + comprar.toFixed(0) + " gramas");
+		} else {
+			$("#mostrar-carnes5").text("Linguiça: " + (comprar.toFixed(0)/1000) + " kg");
+		}
+	}
+
+	if ($('#check6').is(':checked')) {
+
+		if (comprar < 1000) {
+			$("#mostrar-carnes6").text("Pão de Alho: " + comprar.toFixed(0) + " gramas");
+		} else {
+			$("#mostrar-carnes6").text("Pão de Alho: " + (comprar.toFixed(0)/1000) + " kg");
+		}
+	}
+}
+
+if (qtyMale < 2 && qtyFemale < 2 && qtyChildren < 2 ) {
 	$("#result").text("Churrasco para " + qtyMale + " homem, " + qtyFemale + " mulher e " + qtyChildren + " criança:");
-	}
+}
 
-	if (qtyMale > 1 && qtyFemale < 2 && qtyChildren < 2 ) {
+if (qtyMale > 1 && qtyFemale < 2 && qtyChildren < 2 ) {
 	$("#result").text("Churrasco para " + qtyMale + " homens, " + qtyFemale + " mulher e " + qtyChildren + " criança:");
-	}
+}
 
-	if (qtyMale > 1 && qtyFemale > 1 && qtyChildren < 2 ) {
+if (qtyMale > 1 && qtyFemale > 1 && qtyChildren < 2 ) {
 	$("#result").text("Churrasco para " + qtyMale + " homens, " + qtyFemale + " mulheres e " + qtyChildren + " criança:");
-	}
+}
 
-	if (qtyMale > 1 && qtyFemale > 1 && qtyChildren > 1 ) {
+if (qtyMale > 1 && qtyFemale > 1 && qtyChildren > 1 ) {
 	$("#result").text("Churrasco para " + qtyMale + " homens, " + qtyFemale + " mulheres e " + qtyChildren + " crianças:");
-	}
+}
 
-	if (qtyMale < 2 && qtyFemale > 1 && qtyChildren < 1 ) {
+if (qtyMale < 2 && qtyFemale > 1 && qtyChildren < 1 ) {
 	$("#result").text("Churrasco para " + qtyMale + " homem, " + qtyFemale + " mulheres e " + qtyChildren + " criança:");
-	}
+}
 
-	if (qtyMale < 2 && qtyFemale > 1 && qtyChildren > 1 ) {
+if (qtyMale < 2 && qtyFemale > 1 && qtyChildren > 1 ) {
 	$("#result").text("Churrasco para " + qtyMale + " homem, " + qtyFemale + " mulheres e " + qtyChildren + " crianças:");
-	}
+}
 
-	if (qtyMale < 2 && qtyFemale < 2 && qtyChildren > 1 ) {
+if (qtyMale < 2 && qtyFemale < 2 && qtyChildren > 1 ) {
 	$("#result").text("Churrasco para " + qtyMale + " homem, " + qtyFemale + " mulher e " + qtyChildren + " crianças:");
-	}
+}
 
-	if (qtyMale > 1 && qtyFemale < 2 && qtyChildren > 1 ) {
+if (qtyMale > 1 && qtyFemale < 2 && qtyChildren > 1 ) {
 	$("#result").text("Churrasco para " + qtyMale + " homens, " + qtyFemale + " mulher e " + qtyChildren + " crianças:");
-	}
+}
 
-	$("#qty-carne").text("Quantidade de carne: " + qtyTotal +"kg");
+$("#qty-carne").text("Quantidade de carne: " + qtyTotal +"kg");
 
-	calculo()
+calculo()
 });
 
 
@@ -295,9 +295,9 @@ $("#run-step2").click(function() {
 		$(".real3").show();
 		valorChicken = $('#qty-item3').val() * $('#price-item3').val();
 	} else {
-			$("#qty-item3").hide();
-			$("#price-item3").hide();
-			$(".real3").hide();
+		$("#qty-item3").hide();
+		$("#price-item3").hide();
+		$(".real3").hide();
 	}
 
 	if ($('#check4-step3').is(':checked')) {
@@ -401,7 +401,7 @@ $("#check1-step3").click(function() {
 		$("#qty-item1").hide();
 		$("#price-item1").hide();
 		$(".real1").hide();
-		}
+	}
 });
 
 $("#check2-step3").click(function() {
@@ -570,7 +570,7 @@ $("#run-step3").click(function() {
 	console.log("Guardanapo: " + valorNipkin);
 	console.log("Carvão: " + valorCharcoal);
 
-var priceTotal = (valorBeef + valorPork + valorChicken + valorChickenH + valorSausage + valorBread + valorSoda + valorBeer + valorCup + valorNipkin + valorCharcoal)
+	var priceTotal = (valorBeef + valorPork + valorChicken + valorChickenH + valorSausage + valorBread + valorSoda + valorBeer + valorCup + valorNipkin + valorCharcoal)
 
 	$('#steps').show();
 	$('#step-2-1').hide();
@@ -627,5 +627,8 @@ var priceTotal = (valorBeef + valorPork + valorChicken + valorChickenH + valorSa
 
 });
 
+
 console.log("Testing");
+console.log("Mensagem por Stanley Sathler");
+
 
