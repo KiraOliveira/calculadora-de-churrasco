@@ -18,10 +18,10 @@ $("#button-run").click(function(){
 		$('#step-2').hide();
 		$('#step-2-1').hide();
 		$('#step-3').hide();
-		$('#step-3-1').hide();		
+		$('#step-3-1').hide();      
 		$("#button-run").text("Calcular");
 		$(".box").prop('checked', false);
-		$(".box-step3").prop('checked', false);		
+		$(".box-step3").prop('checked', false);     
 		$("#input-male").val(0);
 		$("#input-female").val(0);
 		$("#input-children").val(0);
@@ -41,7 +41,7 @@ $("#button-run").click(function(){
 		$('#step-2-1').hide();
 		$('#step-1').show();
 		$('#step-2').hide();
-		$('#step-3').hide();	
+		$('#step-3').hide();    
 		$('#step-3-1').hide();
 	}
 
@@ -54,7 +54,7 @@ $("#button-cal1").click(function(){
 		$("#step-2").show();
 		$("#step-2-1").hide();
 		$("#step-3").hide();
-		$('#step-3-1').hide();		
+		$('#step-3-1').hide();      
 	}
 });
 
@@ -155,7 +155,7 @@ function calculo() {
 		} else {
 			$("#mostrar-carnes3").text("Asa e Coxa de Frango: " + (comprar.toFixed(0)/1000) + " kg");
 		}
-	}	
+	}   
 
 	if ($('#check4').is(':checked')) {
 
@@ -164,7 +164,7 @@ function calculo() {
 		} else {
 			$("#mostrar-carnes4").text("Coração: " + (comprar.toFixed(0)/1000) + " kg");
 		}
-	}	
+	}   
 
 	if ($('#check5').is(':checked')) {
 
@@ -331,7 +331,7 @@ $("#run-step2").click(function() {
 		$("#qty-item6").hide();
 		$("#price-item6").hide();
 		$(".real6").hide();
-	}	
+	}   
 
 	if ($('#check7-step3').is(':checked')) {
 		$("#qty-item7").show();
@@ -384,7 +384,7 @@ $("#run-step2").click(function() {
 		$("#qty-item11").hide();
 		$("#price-item11").hide();
 		$(".real11").hide();
-	}	
+	}   
 
 
 });
@@ -530,7 +530,7 @@ $("#cal-itens-dif").click(function() {
 
 	if ($('#check7-step3').is(':checked')) {
 		$('#qty-item7').val(qtySoda);
-		valorSoda = $('#qty-item7').val() * $('#price-item7').val();	
+		valorSoda = $('#qty-item7').val() * $('#price-item7').val();    
 	}
 
 	if ($('#check8-step3').is(':checked')) {
@@ -576,59 +576,70 @@ $("#run-step3").click(function() {
 	$('#step-2-1').hide();
 	$('#step-1').hide();
 	$('#step-2').hide();
-	$('#step-3').hide();	
+	$('#step-3').hide();    
 	$('#step-3-1').show();
 
 	$("#result-price").text("Valores:");
 
 	if (valorBeef > 0){
+		$("#item-step3-1").text("Carne Bovina:")
 		$("#price-total1").text(valorBeef.toFixed(2).toString().replace(".", ","));
 	}
 
 	if (valorPork > 0){
+		$("#item-step3-2").text("Carne Suína:")
 		$("#price-total2").text(valorPork.toFixed(2).toString().replace(".", ","));
 	}
 
 	if (valorChicken > 0){
+		$("#item-step3-3").text("Coxa e Asa:")
 		$("#price-total3").text(valorChicken.toFixed(2).toString().replace(".", ","));
 	}
 
 	if (valorChickenH > 0){
+		$("#item-step3-4").text("Coração:")
 		$("#price-total4").text(valorChickenH.toFixed(2).toString().replace(".", ","));
 	}
 
 	if (valorSausage > 0){
+		$("#item-step3-5").text("Linguiça:")
 		$("#price-total5").text(valorSausage.toFixed(2).toString().replace(".", ","));
 	}
 
 	if (valorBread > 0){
+		$("#item-step3-6").text("Pão de Alho:")
 		$("#price-total6").text(valorBread.toFixed(2).toString().replace(".", ","));
 	}
 
 	if (valorSoda > 0){
+		$("#item-step3-7").text("Refrigerante:")
 		$("#price-total7").text(valorSoda.toFixed(2).toString().replace(".", ","));
 	}
 
 	if (valorBeer > 0){
+		$("#item-step3-8").text("Cerveja:")
 		$("#price-total8").text(valorBeer.toFixed(2).toString().replace(".", ","));
 	}
 
 	if (valorCup > 0){
+		$("#item-step3-9").text("Copos Desc.:")
 		$("#price-total9").text(valorCup.toFixed(2).toString().replace(".", ","));
 	}
 
 	if (valorNipkin > 0){
+		$("#item-step3-10").text("Guaradanapo:")
 		$("#price-total10").text(valorNipkin.toFixed(2).toString().replace(".", ","));
 	}
 
 	if (valorCharcoal > 0){
+		$("#item-step3-11").text("Carvão:")
 		$("#price-total11").text(valorCharcoal.toFixed(2).toString().replace(".", ","));
 	}
 
+$("#total-text").text("Valor total:")
+$("#total").text(priceTotal.toFixed(2).toString().replace(".", ","));
+
 });
 
-
-console.log("Testing");
-console.log("Mensagem por Stanley Sathler");
 
 

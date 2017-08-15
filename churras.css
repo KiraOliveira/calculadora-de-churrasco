@@ -3,7 +3,7 @@
 	background-image: url("http://www.vancosty.com.br/wp-content/uploads/2015/05/churrasco-picanha-vale.jpg");
 	background-repeat: no-repeat;
 	color: white;
-	font-family: tahoma;
+	font-family: Open Sans;
 	font-size: 60px;
 
 	position: absolute; 
@@ -22,14 +22,14 @@
 }
 
 .button-run {
-    
-    font-size: 23px;
-    border-radius: 3px; 
-    margin-left: 47%;
+
+	font-size: 23px;
+	border-radius: 3px; 
+	margin-left: 47%;
 }
 
 .steps {
-    
+
 	display:none;
 	width:20%;
 	height:40%;
@@ -206,7 +206,7 @@
 	position: absolute;
 	font-size: 18px;
 	margin-left: 30%;
-;
+	;
 
 }
 
@@ -278,10 +278,37 @@
 
 	position: relative;
 	display: block;
-	font-size: 12px;
+	font-size: 15px;
 	top: 40px;
 	margin-top: 1%;
-	margin-left: 2%;
+	margin-left: 0%;
 	color: #33CC00;
+
+}
+
+.price-total-text {
+
+	position: relative;
+	display: block;
+	font-size: 15px;
+	top: 40px;
+	margin-top: 1%;
+	margin-left: 3%;
+	color: black;
+}
+
+#total-text {
+	border-top-color:black;
+	border-width: 1px 0 0 0;
+	border-style:solid;
+	color: black;
+}
+
+ #total {
+
+	border-color:black;
+	border-width: 1px 0 0 0;
+	border-style:solid;
+	color: red;
 
 }
