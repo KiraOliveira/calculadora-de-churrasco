@@ -283,6 +283,7 @@
 	margin-top: 1%;
 	margin-left: 0%;
 	color: #33CC00;
+	text-align: justify;
 
 }
 
@@ -293,15 +294,18 @@
 	font-size: 15px;
 	top: 40px;
 	margin-top: 1%;
-	margin-left: 3%;
+	margin-left: 4%;
 	color: black;
+	text-align: justify;
 }
 
 #total-text {
 	border-top-color:black;
 	border-width: 1px 0 0 0;
 	border-style:solid;
+	margin-left: 4%;
 	color: black;
+	text-align: justify;
 }
 
  #total {
@@ -310,5 +314,6 @@
 	border-width: 1px 0 0 0;
 	border-style:solid;
 	color: red;
+	text-align: justify;
 
 }
